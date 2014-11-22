@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenCvSharp.CPlusPlus;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,17 @@ namespace FaceTrackingDemo
             this.pictureBox.Invalidate();
 
             this.labelDateTime.Text = e.DateTime.ToString("HH:mm:ss.fff");
+            this.labelFps.Text = String.Format("{0,4:F}", e.CurrentFps);
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            this.videoCameraCapture.Start();
+        }
+
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            this.videoCameraCapture.Stop();
         }
     }
 }

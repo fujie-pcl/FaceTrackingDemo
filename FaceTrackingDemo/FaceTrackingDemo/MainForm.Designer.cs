@@ -30,6 +30,9 @@
         {
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.labelDateTime = new System.Windows.Forms.Label();
+            this.labelFps = new System.Windows.Forms.Label();
+            this.buttonStart = new System.Windows.Forms.Button();
+            this.buttonStop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,11 +53,43 @@
             this.labelDateTime.TabIndex = 1;
             this.labelDateTime.Text = "2014/01/01 01:01:01";
             // 
+            // labelFps
+            // 
+            this.labelFps.AutoSize = true;
+            this.labelFps.Location = new System.Drawing.Point(127, 501);
+            this.labelFps.Name = "labelFps";
+            this.labelFps.Size = new System.Drawing.Size(47, 12);
+            this.labelFps.TabIndex = 2;
+            this.labelFps.Text = "30.00fps";
+            // 
+            // buttonStart
+            // 
+            this.buttonStart.Location = new System.Drawing.Point(658, 12);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(75, 23);
+            this.buttonStart.TabIndex = 3;
+            this.buttonStart.Text = "Start";
+            this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
+            // buttonStop
+            // 
+            this.buttonStop.Location = new System.Drawing.Point(658, 41);
+            this.buttonStop.Name = "buttonStop";
+            this.buttonStop.Size = new System.Drawing.Size(75, 23);
+            this.buttonStop.TabIndex = 4;
+            this.buttonStop.Text = "Stop";
+            this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(744, 522);
+            this.Controls.Add(this.buttonStop);
+            this.Controls.Add(this.buttonStart);
+            this.Controls.Add(this.labelFps);
             this.Controls.Add(this.labelDateTime);
             this.Controls.Add(this.pictureBox);
             this.Name = "MainForm";
@@ -69,6 +104,9 @@
 
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label labelDateTime;
+        private System.Windows.Forms.Label labelFps;
+        private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.Button buttonStop;
     }
 }
 
